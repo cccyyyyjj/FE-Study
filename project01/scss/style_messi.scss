@@ -1,6 +1,49 @@
-@charset 'utf-8';
+@charset "utf-8";
+ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
 h1{
-	font-size:100px;
-	text-align:center;
-	color:#959595;
+	color:#333;
+	padding-bottom:0.5em;
+	border-bottom:2px solid #333;
+}
+
+.section_book{
+	
+}
+
+.book_header{
+	display:block;
+	width:40%;
+	height:160px;
+}
+
+.list_book{
+	overflow: hidden;
+	height:100%;
+
+	> li{
+		float:left;
+		width:30%;
+	}
+
+}
+
+.link_box{
+	background-color:black; //테스트 속성
+	
+	position:relative;
+	display:block;
+	height:160px;
+
+	img {
+		width:100%;
+	}
+
+
+	.title{
+		display:block;
+	}
 }
