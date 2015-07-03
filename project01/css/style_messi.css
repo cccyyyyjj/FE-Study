@@ -1,0 +1,32 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+h1 {
+  color: #333;
+  padding-bottom: 1em;
+  border-bottom: 2px solid #333; }
+
+.book_header {
+  display: block;
+  width: 40%;
+  height: 160px; }
+
+.list_book {
+  overflow: hidden;
+  height: 100%; }
+  .list_book > li {
+    float: right;
+    width: 30%; }
+
+.link_box {
+  position: relative;
+  display: block;
+  height: 160px; }
+  .link_box img {
+    width: 100%; }
+  .link_box .title {
+    display: block; }
+
+/*# sourceMappingURL=style_messi.css.map */

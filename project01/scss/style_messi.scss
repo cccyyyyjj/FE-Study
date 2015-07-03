@@ -6,12 +6,8 @@ ul{
 }
 h1{
 	color:#333;
-	padding-bottom:0.5em;
-	border-bottom:2px solid #333;
-}
-
-.section_book{
-	
+	padding-bottom:1em;
+	border-bottom:2px solid #333; 
 }
 
 .book_header{
@@ -25,14 +21,13 @@ h1{
 	height:100%;
 
 	> li{
-		float:left;
+		float:right;
 		width:30%;
 	}
 
 }
 
 .link_box{
-	background-color:black; //테스트 속성
 	
 	position:relative;
 	display:block;
