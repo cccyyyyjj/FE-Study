@@ -1,44 +1,82 @@
-@charset "utf-8";
-ul{
-	margin:0;
-	padding:0;
-	list-style:none;
-}
-h1{
-	color:#333;
-	padding-bottom:1em;
-	border-bottom:2px solid #333; 
+@charset "UTF-8";
+/* reset */
+h1{color:#333;}
+ul{margin:0;padding:0;list-style:none;}
+a{text-decoration:none;}
+img{border:0;}
+
+// mixin, common-class 정의
+@mixin insetOutline($r:00, $g:00, $b:00, $a:0.2){
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	border:1px solid rgba($r, $g, $b, $a);
 }
 
-.book_header{
-	display:block;
-	width:40%;
-	height:160px;
+.ell{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	word-wrap:break-word;
 }
 
+/* style */
 .list_book{
 	overflow:hidden;
-	height:100%;
 
 	> li{
-		float:right;
-		width:30%;
+		float:left;
+		width:40%;
+		min-width:200px;
 	}
-
 }
 
 .link_box{
-	
+	&:after{
+		@include insetOutline;
+		content:'';
+	}
+
 	position:relative;
 	display:block;
-	height:160px;
+	height:134px;
 
 	img {
+		position:absolute;
+		top:0;
+		bottom:0;
 		width:100%;
+		margin:auto 0;
 	}
-
 
 	.title{
-		display:block;
+		position:absolute;
+		left:0;
+		right:0;
+		bottom:0;
+		padding:5px 2px;
+		background-color:rgba(0,0,0,.6);
+		font-size:0.8em;
+		font-weight:normal;
+		text-align:left;
+		color:#fff;
 	}
+
+}
+
+.bg_dimmed{
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:27px;
+	background-color:#000;
+
+	/* IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+	/* IE 5-7 */
+	filter: alpha(opacity=60);
+	/* 표준 */
+	opacity: 0.6;
 }
