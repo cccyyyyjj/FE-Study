@@ -1,4 +1,4 @@
-@import "reset.css";
+@import "reset_ccc.css";
 
 /* layout */
 .cont_box{position:relative;padding:10% 2%;box-sizing:border-box}
@@ -13,7 +13,7 @@ a,span{display:block;text-decoration:none}
 .bord_posi{position:absolute;top:0;left:0;width:100%;height:100%;border:5px solid #4a4a4a;opacity:0.3;alpha(opacity=3);box-sizing:border-box;}
 .shot_txt{display:block;position:absolute;left:0;bottom:0;padding:10px 5%;width:90%;
 text-align:center;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;
-background:url(../img/bg.png) repeat-x;color:#fff;cursor:pointer}
+background:url(../images/bg.png) repeat-x;color:#fff;cursor:pointer}
 em:hover,em:focus{text-decoration:underline}
 /* .txt_line{border-top:5px solid #b1b1b1;border-bottom:5px solid #b1b1b1} */
 /* .tex_fig{text-align:center}
