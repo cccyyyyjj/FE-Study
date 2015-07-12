@@ -1,1 +1,37 @@
 @charset "utf-8";
+/* reset */
+ul{margin:0;padding:0}
+li{list-style:none}
+
+/* style */
+.clearfix:after {
+	display: table;
+	clear: both;
+	content: '';
+}
+
+li {
+	padding: 10px 5px;
+	border-top: 1px dotted #999;
+	font-size: 14px;
+	color: #4585b3;
+
+	&:first-child {
+		border-top: 0;
+	}
+}
+
+/* 미디어쿼리 */
+@media only screen and (min-width: 640px) {
+	
+	.list_wrap li {
+		float:left;
+		width: 50%;
+		box-sizing: border-box;
+
+		&:first-child + li {
+			border-top: 0;
+		}
+	}
+
+}
