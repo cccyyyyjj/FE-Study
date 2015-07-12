@@ -10,5 +10,34 @@
 	<hr>
 	<h2>CSS3 - animation / @keyframes ( IE10+ )</h2>
 	<div class="loading-bar animate-loading" aria-label="로딩중"></div>
+	<hr>
+	<h2>JS ( IE9이하 )</h2>
+	<div class="loading-bar js-loading" aria-label="로딩중">
+		<span id="target" class="inner-loading-bar"></span>
+	</div>
+
+<script>
+	var target = document.getElementById('target'),
+		posX = window.getComputedStyle ? parseInt(window.getComputedStyle(target).left) : parseInt(target.currentStyle.left),
+		maxPosX = 200,
+		distance = 5;
+	
+	function animationLoading() {
+		if( posX === maxPosX ) {
+			posX = -40;
+		} else {
+			target.style.left = posX + 'px';
+		}
+		
+		posX += distance;
+
+	}
+
+	var repeatLoading = function(){
+		setInterval(animationLoading, 25);
+	}
+	
+	repeatLoading();
+</script>
 </body>
 </html>
