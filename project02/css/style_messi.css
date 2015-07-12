@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* reset */
+h1 {
+  color: #333;
+}
+
+h2 {
+  font-size: 1em;
+}
+
+/* 로딩바 기본형태 */
+.loading-bar {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 3px;
+  background-color: #dedede;
+}
+.loading-bar:after, .loading-bar .inner-loading-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  background-color: #3dc900;
+  content: '';
+}
+
+.js-loading:after {
+  display: none;
+}
+
+/* 로딩바 애니메이션 부분 */
+.animate-loading:after {
+  animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+  0% {
+    left: -40px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/*# sourceMappingURL=style_messi.css.map */
