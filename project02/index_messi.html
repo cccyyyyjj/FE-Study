@@ -17,27 +17,32 @@
 	</div>
 
 <script>
-	var target = document.getElementById('target'),
-		posX = window.getComputedStyle ? parseInt(window.getComputedStyle(target).left) : parseInt(target.currentStyle.left),
-		maxPosX = 200,
-		distance = 5;
-	
-	function animationLoading() {
-		if( posX === maxPosX ) {
-			posX = -40;
+var loadingBar = {
+	'settings': {
+		'target': document.getElementById('target'),
+		'posX': window.getComputedStyle ? parseInt(window.getComputedStyle(target).left) : parseInt(target.currentStyle.left),
+		'maxPosX': 200,
+		'distance' : 5
+	},
+
+	'init': function(){
+		this.repeatLoading();
+	},
+
+	'repeatLoading': function(){
+	 	setInterval(this.animationLoading, 25);
+	 },
+
+	 'animationLoading': function(){
+		if( loadingBar.settings.posX === loadingBar.settings.maxPosX ) {
+			loadingBar.settings.posX = -40;
 		} else {
-			target.style.left = posX + 'px';
+			loadingBar.settings.target.style.left = loadingBar.settings.posX + 'px';
 		}
-		
-		posX += distance;
-
-	}
-
-	var repeatLoading = function(){
-		setInterval(animationLoading, 25);
-	}
-	
-	repeatLoading();
+		loadingBar.settings.posX += loadingBar.settings.distance;
+	 }
+}
+loadingBar.init();
 </script>
 </body>
 </html>
