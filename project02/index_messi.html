@@ -16,33 +16,20 @@
 		<span id="target" class="inner-loading-bar"></span>
 	</div>
 
+<script src="http://code.jquery.com/jquery.js"></script>
 <script>
-var loadingBar = {
-	'settings': {
-		'target': document.getElementById('target'),
-		'posX': window.getComputedStyle ? parseInt(window.getComputedStyle(target).left) : parseInt(target.currentStyle.left),
-		'maxPosX': 200,
-		'distance' : 5
-	},
+	(function($){
+		var $target = $('#target');
 
-	'init': function(){
-		this.repeatLoading();
-	},
-
-	'repeatLoading': function(){
-	 	setInterval(this.animationLoading, 25);
-	 },
-
-	 'animationLoading': function(){
-		if( loadingBar.settings.posX === loadingBar.settings.maxPosX ) {
-			loadingBar.settings.posX = -40;
-		} else {
-			loadingBar.settings.target.style.left = loadingBar.settings.posX + 'px';
+		var animateLoading = function(){
+			$target.animate({left: "100%"}, 1000, 'linear', function(){
+				$target.css('left','-40px');
+			});
 		}
-		loadingBar.settings.posX += loadingBar.settings.distance;
-	 }
-}
-loadingBar.init();
+
+		setInterval(animateLoading, 1);
+
+	})(window.jQuery)
 </script>
 </body>
 </html>
