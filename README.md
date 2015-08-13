@@ -12,3 +12,4 @@ HTML / CSS / JS 스터디 저장소 입니다.
 - [01 섬네일박스](project01/README.md)
 - [02 로딩바](project02/README.md)
 - [03 반응형 리스트 컬럼 구분선](project03/README.md)
+- [04 유동적인 정사각형 박스 만들기](project04/README.md)
