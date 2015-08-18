@@ -12,4 +12,10 @@ div{
 /* style */
 .flex-box {
 	padding:10%;
+	/*
+		[css 명세서]
+		8.4 패딩(padding) 속성:
+		패딩의 백분율 값은 생성된 박스의 용기블럭(containing block) 너비의 속성들을 참조한다.
+		또한 'padding-top'과 'padding-bottom'에 대해서도 계산된다.
+	*/
 }
