@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/* 초기화 */
+body{margin:0;padding:0;}
+ul{margin:0;padding:0;margin:0 auto;border:1px solid #E49F59;}
+li{list-style:none;}
+ul li div{padding:10px 5px;}
+
+/* IE 6~7 브라우저는 가상 요소 선택자 :after를 지원하지 않습니다. 그러나 CSS hack을 이용하여 자식의 높이를 부모에게 전달 할 수 있습니다. zoom:1 속성은 IE 전용 확장 속성으로써 본래의 존재 목적은 IE 브라우저에서 웹 문서를 자유롭게 'zoom in / zoom out' 하는 것 입니다. 이 속성을 부여하게 되면 요소는 IE 브라우저에서만 존재하는 hasLayout 이라는 개념의 속성을 갖게 되는데 이 속성이 IE 브라우저에서 float 문제를 해결하는 trigger로 작용을 하고 다른 브라우저에는 영향을 미치지 않습니다. zoom 속성 앞에 '*'을 붙이는 이유는 현재는 존재하지 않지만 향후 zoom과 동일한 이름을 지닌 속성이 표준으로 등장하거나 다른 웹 브라우저에서 CSS 확장 속성으로 등장하더라도 이 코드를 무시하도록 만드는 'hack'을 사용한 것입니다. 속성 앞에 공백 없이 '*'을 붙이면 해당 속성은 IE 6~7 브라우저에서만 작용하게 됩니다. */
+ul{*zoom:1;}
+
+/* 
+	비 플로팅 요소에 clear 사용 방법
+	위치 : clear 시키면 관계플로트된 마진 아래에 위치
+*/
+ul:after{
+	content:"";
+	display:block; /* :after :before; - 기본 inline이기 때문에 */
+	clear:both; /* left right 둘다 clear */
+
+	border:1px solid green;
+	height:5px;
+}
+
+/* 
+	float
+	요소가 부동(떠있다)되면 문서의 흐름에서 제외되고 용기블럭 또는 다른 부동요소의 가장자리에 닿을 때까지 이동
+*/
+ul li{
+	width:50%;
+	float:left; 
+	border-top:1px solid #000;
+}
+ul li:first-child{border-top:0;}
+ul li:nth-child(2){border-top:none;}
+
+/* 최대 너비가 640px 이상 늘어나지 않게 하니까 640px 이하에서 동작됨 */
+@media all and (max-width:640px) {
+	ul li{width:100%;}
+	ul li:nth-child(2){border-top:1px solid #000;}
+}
