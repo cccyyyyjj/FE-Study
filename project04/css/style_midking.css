@@ -6,11 +6,10 @@ div{
 	width: 100px;
 	height: 100px;
 	border: 1px solid;
-	background:#3B76DE url(http://cfile2.uf.tistory.com/image/17294C3350AB9C1853A3A0) no-repeat 0 0;
-	background-size:150%;
+	background:#3B76DE;
 }
 
 /* style */
 .flex-box {
-	padding:5%;
+	padding:10%;
 }
