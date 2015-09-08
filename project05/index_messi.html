@@ -8,63 +8,110 @@
 <body>
 	<h1>04 테두리 유지하는 테이블 만들기</h1>
 	<hr>
-	<table class="table-basic">
+	<h5>1. th, td 만을 이용한 스타일링</h5>
+	<table class="td-style">
 	<thead>
 	<tr>
-	<th scope="col">이름</th>
-	<th scope="col">국어</th>
-	<th scope="col">영어</th>
-	<th scope="col">수학</th>
-	<th scope="col">사회</th>
-	<th scope="col">과학</th>
-	<th scope="col">총평</th>
+		<th scope="col">th</th>
+		<th scope="col">th</th>
+		<th scope="col">th</th>
+		<th scope="col">th</th>
+		<th scope="col">th</th>
+		<th scope="col">th</th>
+		<th scope="col">th</th>
 	</tr>
 	</thead>
 	<tbody>
 	<tr>
-	<th scope="row">조영광</th>
-	<td>S</td>
-	<td>S</td>
-	<td>S</td>
-	<td>S</td>
-	<td>S</td>
-	<td>S</td>
+		<th scope="row" rowspan="3">th</th>
+		<th scope="row" rowspan="2">th</th>
+		<td rowspan="4">td</td>
+		<td>td</td>
+		<td>td</td>
+		<td>td</td>
+		<td>td</td>
 	</tr>
 	<tr>
-	<th scope="row">권태완</th>
-	<td>S</td>
-	<td>S</td>
-	<td>S</td>
-	<td>S</td>
-	<td>S</td>
-	<td>S</td>
+		<td rowspan="3">td</td>
+		<td>td</td>
+		<td>td</td>
+		<td>td</td>
 	</tr>
 	<tr>
-	<th scope="row">최용진</th>
-	<td>S</td>
-	<td>S</td>
-	<td>S</td>
-	<td>S</td>
-	<td>S</td>
-	<td>S</td>
+		<th scope="row">th</th>
+		<td rowspan="2">td</td>
+		<td>td</td>
+		<td>td</td>
 	</tr>
 	<tr>
-	<th scope="row">김명섭</th>
-	<td>S</td>
-	<td>S</td>
-	<td>S</td>
-	<td>S</td>
-	<td>S</td>
-	<td>S</td>
+		<th scope="row">th</th>
+		<th scope="row">th</th>
+		<td>td</td>
+		<td rowspan="2">td</td>
 	</tr>
 	<tr>
-	<th scope="row">노경호</th>
-	<td>S</td>
-	<td>S</td>
-	<td>S</td>
-	<td>S</td>
-	<td>S</td>
-	<td>S</td>
+		<th scope="row">th</th>
+		<th scope="row">th</th>
+		<td>td</td>
+		<td>td</td>
+		<td>td</td>
+		<td>td</td>
+	</tr>
+	</tbody>
+	</table>
+	<hr>
+	<h5>2. col 요소를 이용한 스타일링</h5>
+	<table class="col-style">
+	<colgroup>
+		<col><col><col><col><col><col><col>
+	</colgroup>
+	<thead>
+	<tr>
+		<th scope="col">th</th>
+		<th scope="col">th</th>
+		<th scope="col">th</th>
+		<th scope="col">th</th>
+		<th scope="col">th</th>
+		<th scope="col">th</th>
+		<th scope="col">th</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<th scope="row" rowspan="3">th</th>
+		<th scope="row" rowspan="2">th</th>
+		<td rowspan="4">td</td>
+		<td>td</td>
+		<td>td</td>
+		<td>td</td>
+		<td>td</td>
+	</tr>
+	<tr>
+		<td rowspan="3">td</td>
+		<td>td</td>
+		<td>td</td>
+		<td>td</td>
+	</tr>
+	<tr>
+		<th scope="row">th</th>
+		<td rowspan="2">td</td>
+		<td>td</td>
+		<td>td</td>
+	</tr>
+	<tr>
+		<th scope="row">th</th>
+		<th scope="row">th</th>
+		<td>td</td>
+		<td>td</td>
+	</tr>
+	<tr>
+		<th scope="row">th</th>
+		<th scope="row">th</th>
+		<td>td</td>
+		<td>td</td>
+		<td>td</td>
+		<td>td</td>
+		<td>td</td>
 	</tr>
 	</tbody>
 	</table>
