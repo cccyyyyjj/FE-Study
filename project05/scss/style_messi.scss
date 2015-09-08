@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* reset */
+h1{color:#333}
+
+/* style */
+table{
+	width:400px;
+	border-collapse:collapse;
+
+	th, td{
+		padding: 5px 10px;
+		font-size: 0.8em;
+	}
+
+	th{background-color: #f4f4f4;}
+
+	td{text-align: center;}
+}
+
+.td-style{
+	th, td {
+		border: 1px solid #a3a3a3;
+		border-right-width: 0;
+	}
+	th{
+		&:first-child{
+			border-left-width:0;
+		}
+	}
+	tbody th[rowspan]{
+		border-right-width: 1px;
+	}
+}
+
+.col-style{
+	col + col{border-left: 1px solid #a3a3a3;}
+	
+	th, td{
+		border: 1px solid #a3a3a3;
+		border-width: 1px 0;
+	}
+}
